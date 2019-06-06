@@ -1,0 +1,702 @@
+html {
+  font-family: sans-serif;
+  background-color: #cfcfd1;
+  /* margin-bottom: 60px; */
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+
+h1 {
+  grid-column: 1/-3;
+  margin-top: 0px;
+    /* margin-left: -990px; */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+.wrapper {
+  /* width: 100%;
+  margin: 0 auto; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(153px, 1fr));
+  grid-gap: 1em;
+  padding: 1.2em;
+  /* justify-items: center; */
+}
+
+.afbeelding-cover {
+  max-width: 100px;
+}
+
+/* my logo */
+
+.logo {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: #cfcfd1;
+  margin-left: 677px;
+  cursor: pointer;
+}
+
+.album {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 80vw;
+  grid-gap: 1.5em;
+}
+
+/* login and register buttons */
+.lr {
+  margin: 10px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+  text-align: center;
+}
+
+.lr:hover,
+.lr:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#login {
+  color: #aaaaaa;
+  float: left;
+  font-size: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px #000;
+}
+
+#login:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#register {
+  color: #aaaaaa;
+  float: left;
+  font-size: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px #000;
+}
+
+#register:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid img {
+  max-width: 100%;
+}
+
+.modaal-achtergrond {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* modal with animations */
+.modaal {
+  max-width: 60%;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: #fff;
+  overflow-y: auto;
+  max-height: calc(100vh - 210px);
+  -webkit-animation:minimise 500ms linear;
+  -moz-animation:minimise 500ms linear;
+  -ms-animation:minimise 500ms linear;
+  -o-animation:minimise 500ms linear;
+  animation:minimise 500ms linear;
+  -webkit-animation-name:bounce;
+  -moz-animation-name:bounce;
+  -ms-animation-name:bounce;
+  -o-animation-name:bounce;
+  animation-name:bounce;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    /*transform*/
+	-webkit-transform:scale3d(0.1,0.1,1);
+	-moz-transform:scale3d(0.1,0.1,1);
+	-ms-transform:scale3d(0.1,0.1,1);
+	-o-transform:scale3d(0.1,0.1,1);
+	 transform:scale3d(0.1,0.1,1);
+  -webkit-box-shadow:0 3px 20px rgba(0,0,0,0.9);
+  -moz-box-shadow:0 3px 20px rgba(0,0,0,0.9);
+  -ms-box-shadow:0 3px 20px rgba(0,0,0,0.9);
+  -o-box-shadow:0 3px 20px rgba(0,0,0,0.9);
+    box-shadow:0 3px 20px rgba(0,0,0,0.9);
+  }
+  55% {
+    -webkit-transform: scale3d(1.08,1.08,1);
+    -moz-transform: scale3d(1.08,1.08,1);
+    -ms-transform: scale3d(1.08,1.08,1);
+    -o-transform: scale3d(1.08,1.08,1);
+    transform: scale3d(1.08,1.08,1);
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0);
+    -moz-box-shadow: 0 10px 20px rgba(0,0,0,0);
+    -ms-box-shadow: 0 10px 20px rgba(0,0,0,0);
+    -o-box-shadow: 0 10px 20px rgba(0,0,0,0);
+    box-shadow: 0 10px 20px rgba(0,0,0,0);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95,0.95,1);
+    -moz-transform: scale3d(0.95,0.95,1);
+    -ms-transform: scale3d(0.95,0.95,1);
+    -o-transform: scale3d(0.95,0.95,1);
+    transform: scale3d(0.95,0.95,1);
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    -ms-box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    -o-box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  }
+  100% {
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+    -webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+    -ms-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+    -o-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+}
+
+@-webkit-keyframes minimise {
+  0% {
+    -webkit-transform: scale3d(1,1,1);
+    -moz-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    -o-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.1,0.1,1);
+    -moz-transform: scale3d(0.1,0.1,1);
+    -ms-transform: scale3d(0.1,0.1,1);
+    -o-transform: scale3d(0.1,0.1,1);
+    transform: scale3d(0.1,0.1,1);
+  }
+}
+
+/* picture album */
+
+img.modaal-knop {
+  max-width: 153px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+/* picture album in modal */
+img.modaal-knop1 {
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+}
+
+/* song duration */
+
+.tijdRechts {
+  margin: 0;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.tijdRechts li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 1em;
+}
+
+.tijdRechts span {
+  text-align: right;
+  font-style: italic;
+}
+
+/* close button */
+
+.sluit-knop {
+  color: #aaaaaa;
+  float: right;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px #000;
+}
+
+.sluit-knop:hover,
+.sluit-knop:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* picture of the artist */
+
+.artist {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+}
+
+/* read more */
+
+#more {
+  display: none;
+  cursor: pointer;
+}
+
+#readBtn {
+  cursor: pointer;
+  color: #aaaaaa;
+  font-size: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px #000;
+}
+
+#readBtn:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* album 1: XXXTENTACION ? */
+
+#abouttitle1 {
+float: right;
+margin-right: -575px;
+    margin-top: -765px;
+}
+
+#about1 {
+  float: right;
+    margin-right: -670px;
+    margin-top: -700px;
+    width: 300px;
+}
+
+#aboutalbum1 {
+  float: right;
+  margin-right: -575px;
+      margin-top: -475px;
+}
+
+#albuminfo1 {
+  float: right;
+    margin-right: -670px;
+    margin-top: -410px;
+    width: 300px;
+}
+
+/* album 2: Lil Skies Life of a Dark Rose */
+
+#abouttitle2 {
+float: right;
+margin-right: -540px;
+    margin-top: -660px;
+}
+
+#about2 {
+  float: right;
+    margin-right: -635px;
+    margin-top: -595px;
+    width: 300px;
+}
+
+#aboutalbum2 {
+float: right;
+margin-right: -540px;
+    margin-top: -330px;
+}
+
+#albuminfo2 {
+  float: right;
+    margin-right: -635px;
+    margin-top: -265px;
+    width: 300px;
+}
+
+/* album 3: Ski Mask The Slump God STOKELEY */
+
+#abouttitle3 {
+float: right;
+margin-right: -540px;
+    margin-top: -640px;
+}
+
+#about3 {
+  float: right;
+    margin-right: -635px;
+    margin-top: -575px;
+    width: 300px;
+}
+
+#aboutalbum3 {
+float: right;
+margin-right: -540px;
+    margin-top: -330px;
+}
+
+#albuminfo3 {
+  float: right;
+    margin-right: -635px;
+    margin-top: -270px;
+    width: 300px;
+}
+
+/* album 4: Kodak Black Project Baby 2 */
+
+#abouttitle4 {
+float: right;
+margin-right: -570px;
+    margin-top: -750px;
+}
+
+#about4 {
+  float: right;
+    margin-right: -655px;
+    margin-top: -685px;
+    width: 300px;
+}
+
+#aboutalbum4 {
+float: right;
+margin-right: -570px;
+    margin-top: -540px;
+}
+
+#albuminfo4 {
+  float: right;
+    margin-right: -655px;
+    margin-top: -470px;
+    width: 300px;
+}
+
+/* album 5: XXXTENTACION 17 */
+
+#abouttitle5 {
+float: right;
+margin-right: -540px;
+    margin-top: -605px;
+}
+
+#about5 {
+  float: right;
+    margin-right: -625px;
+    margin-top: -540px;
+    width: 300px;
+}
+
+#aboutalbum5 {
+float: right;
+margin-right: -540px;
+    margin-top: -295px;
+}
+
+#albuminfo5 {
+  float: right;
+    margin-right: -625px;
+    margin-top: -230px;
+    width: 300px;
+    line-height: 1.2em;
+}
+
+/* album 6: Post Malone Beerbongs & Bentleys */
+
+#abouttitle6 {
+float: right;
+margin-right: -560px;
+    margin-top: -730px;
+}
+
+#about6 {
+  float: right;
+    margin-right: -650px;
+    margin-top: -660px;
+    width: 300px;
+}
+
+#aboutalbum6 {
+float: right;
+margin-right: -560px;
+    margin-top: -440px;
+}
+
+#albuminfo6 {
+  float: right;
+    margin-right: -650px;
+    margin-top: -375px;
+    width: 300px;
+}
+
+/* album 7: XXXTENTACION SKINS */
+
+#abouttitle7 {
+float: right;
+margin-right: -570px;
+    margin-top: -605px;
+}
+
+#about7 {
+  float: right;
+    margin-right: -660px;
+    margin-top: -540px;
+    width: 300px;
+}
+
+#aboutalbum7 {
+float: right;
+margin-right: -570px;
+    margin-top: -305px;
+}
+
+#albuminfo7 {
+  float: right;
+    margin-right: -660px;
+    margin-top: -240px;
+    width: 300px;
+}
+
+/* album 8: Logic Bobby Tarantino II */
+
+#abouttitle8 {
+float: right;
+margin-right: -560px;
+    margin-top: -640px;
+}
+
+#about8 {
+  float: right;
+    margin-right: -650px;
+    margin-top: -570px;
+    width: 300px;
+}
+
+#aboutalbum8 {
+float: right;
+margin-right: -560px;
+    margin-top: -370px;
+}
+
+#albuminfo8 {
+  float: right;
+    margin-right: -650px;
+    margin-top: -300px;
+    width: 300px;
+}
+
+/* footer */
+
+footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: midnightblue;
+   color: white;
+   text-align: center;
+   border-radius: 300px;
+}
+
+/* listen to this album buttons */
+#music1 {
+  margin: 10px 30px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+#music1:hover,
+#music1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#music2 {
+  margin: 10px 30px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+#music2:hover,
+#music2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#music3 {
+  margin: 10px 30px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+#music3:hover,
+#music3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#music4 {
+  margin: 10px 30px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+#music4:hover,
+#music4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#music5 {
+  margin: 10px 30px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+#music5:hover,
+#music5:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#music6 {
+  margin: 10px 30px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+#music6:hover,
+#music6:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#music7 {
+  margin: 10px 30px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+#music7:hover,
+#music7:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#music8 {
+  margin: 10px 30px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background-color: midnightblue;
+  color: #cfcfd1;
+  float:  right;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px #000;
+  cursor: pointer;
+}
+
+#music8:hover,
+#music8:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* validation checker */
+
+#validatie img {
+    height: 1em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+    cursor: pointer;
+}
